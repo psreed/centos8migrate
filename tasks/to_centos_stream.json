@@ -2,9 +2,14 @@
     "description": "Migrate CentOS 8.5.2111 to CentOS 8 Stream",
     "parameters": {
         "allow_erasing": {
-            "description": "Allow erasing of RPM packages in order to complete the migration",
+            "description": "Allow erasing of RPM packages in order to complete the migration.",
             "type": "Boolean",
             "default": false
+        },
+        "reboot": {
+            "description": "Reboot after migration tasks are complete.",
+            "type": "Boolean",
+            "default": true
         }
     },
     "implementations": [

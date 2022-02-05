@@ -20,8 +20,9 @@ if [[ "${RELEASE}" == *"CentOS Linux"* && "${RELEASE}" == *"8"* ]]; then
   fi
 
   if [[ "${PT_reboot}" == true ]]; then 
-      echo "Rebooting..."
-      shutdown -r +1
+    echo "Scheduling system restart in 1 minute..."
+    shutdown -r +1
   fi
+
 fi
 

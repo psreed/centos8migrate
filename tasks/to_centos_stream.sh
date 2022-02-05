@@ -16,6 +16,12 @@ if [ -f /etc/redhat-release ]; then
     else
       yum distro-sync
     fi
+
+    if [[ "${PT_reboot}" == true ]]; then 
+      echo "Scheduling system restart in 1 minute..."
+      shutdown -r +1
+    fi
+
   else 
     echo "System is not CentOS Version 8.5.2111, please update prior to migration."
   fi
