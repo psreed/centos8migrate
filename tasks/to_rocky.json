@@ -1,0 +1,18 @@
+{
+    "description": "Migrate system from CentOS 8.5.2111 to Rocky Linux 8",
+    "parameters": {
+        "reboot": {
+            "description": "Reboot after migration tasks are complete.",
+            "type": "Boolean",
+            "default": true
+        }
+    },
+    "implementations": [
+        {
+            "name": "to_rocky.sh",
+            "requirements": [
+                "shell"
+            ]
+        }
+    ]
+}

@@ -4,7 +4,7 @@
 if [ -f /etc/redhat-release ]; then 
 
   RELEASE=`head -1 /etc/redhat-release`
-  if [[ "${RELEASE}" == *"8.5.2111" ]]; then
+  if [[ "${RELEASE}" == "CentOS Linux release 8.5.2111" ]]; then
     echo "Release: ${RELEASE}"
 
     yum --disablerepo '*' --enablerepo extras swap centos-linux-repos centos-stream-repos -y

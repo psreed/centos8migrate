@@ -21,8 +21,18 @@ If you are managing the CentOS repos using Puppet, you will want to disable that
 If this is not disabled prior to running, you may create a much larger issue with trying to apply the wrong repos to your hosts.
 
 
+#### Systems will need online access to repos
+These scripts assume that the systems will have access to the internet in order to download the new OS images/packages/updates.
 
-## PQL Query to identify all `CentOS 8` (excluding `CentOS 8 Steam`) hosts in your environment
+#### These tasks will take a very long time to run.
+
+Be patient.
+
+Be more patient.
+
+If you're still not patient enough, login to your target host and watch things with `top`. You should see lots of activity with `yum` and `semodule` processes, but they may pop in and out of the process list regularly. There are a lot of things to update and these things take time. Also, things are dependant on download speed.
+
+## PQL Query to identify all `CentOS 8` (excluding `CentOS 8 Stream`) hosts in your environment
 
 ```inventory[certname] { facts.os.name = "CentOS" and facts.os.release.major="8" and facts.os.distro.id!="CentOSStream"}```
 
@@ -39,6 +49,8 @@ I would recommend starting with this task to make sure your release is as up to 
 ### to_centos_stream
 
 This task will convert CentOS 8 hosts to CentOSSteam, performing a reboot on completion.
+
+Estimated runtime for this task is ~17mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
 ### to_alma_linux
 
