@@ -21,7 +21,7 @@ if [[ "${RELEASE}" == *"CentOS Linux"* && "${RELEASE}" == *"8"* ]]; then
 
   if [[ "${PT_reboot}" == true ]]; then 
       echo "Rebooting..."
-      shutdown -r now
+      shutdown -r +1
   fi
 fi
 
