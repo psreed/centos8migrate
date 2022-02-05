@@ -22,9 +22,9 @@ If this is not disabled prior to running, you may create a much larger issue wit
 
 
 
-## PQL Query to identify all `CentOS 8` (excluding CentOSSteam) hosts in your environment
+## PQL Query to identify all `CentOS 8` (excluding `CentOS 8 Steam`) hosts in your environment
 
-```inventory[certname,facts.os.distro.id,facts.os.release.major] { facts.os.name = "CentOS" and facts.os.release.major="8" and facts.os.distro.id!="CentOSStream"}```
+```inventory[certname] { facts.os.name = "CentOS" and facts.os.release.major="8" and facts.os.distro.id!="CentOSStream"}```
 
 ## Tasks
 
