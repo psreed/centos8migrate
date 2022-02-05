@@ -14,7 +14,7 @@
     },
     "implementations": [
         {
-            "name": "toCentOSVault.sh",
+            "name": "to_centos_vault.sh",
             "requirements": [
                 "shell"
             ]
