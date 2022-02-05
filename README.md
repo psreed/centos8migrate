@@ -4,8 +4,10 @@ Puppet Helpers to Migrate from `CentOS 8` to `Alma Linux 8`, `Rocky Linux 8` or 
 
 ## WARNING: Use at your own risk. There is NO Support for this module.
 
-### Note: Testing was done with the latest release of CentOS 8 Only. For this reason, I suggest starting with 
+### Note: Update CentOS 8 First
 
+Testing of these tasks was performed with the latest release of CentOS 8 Only.
+For this reason, I suggest starting with the `toCentOSVault` task and updating to the most recent packages possible (`yum udpate -y`) before running the other migration tasks.
 
 ## PQL Query to identify all `CentOS 8` (excluding CentOSSteam) hosts in your environment
 
