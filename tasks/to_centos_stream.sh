@@ -7,7 +7,7 @@ if [ -f /etc/redhat-release ]; then
   if [[ "${RELEASE}" == *"8.5.2111" ]]; then
     echo "Release: ${RELEASE}"
 
-    yum --disablerepo '*' --enablerepo extras swap centos-linux-repos centos-stream-repos
+    yum --disablerepo '*' --enablerepo extras swap centos-linux-repos centos-stream-repos -y
     yum clean all
     yum makecache
 
@@ -16,6 +16,8 @@ if [ -f /etc/redhat-release ]; then
     else
       yum distro-sync
     fi
+
+    yum update -y
 
     if [[ "${PT_reboot}" == true ]]; then 
       echo "Scheduling system restart in 1 minute..."
