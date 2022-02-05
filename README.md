@@ -4,10 +4,23 @@ Puppet Helpers to Migrate from `CentOS 8` to `Alma Linux 8`, `Rocky Linux 8` or 
 
 ## WARNING: Use at your own risk. There is NO Support for this module.
 
-### Note: Update CentOS 8 First
+## IMPORTANT STEPS -- Seriously, read this first!!!
 
-Testing of these tasks was performed with the latest updates of `CentOS 8` that are available as of EOL.
+#### Update to latest CentOS 8.5 EOL pacakges
+
+Testing of these tasks was performed with the latest updates of `CentOS 8.5` that are available as of EOL in the vault archive.
 For this reason, I suggest starting with the `toCentOSVault` task for all `CentOS 8` systems to update to that point before migration.
+
+Testing was performed starting with:
+- `CentOS 8.3 (version 2011)` ISO.
+- `Server with GUI installation`
+- Updated to latest 8.5 using the vault repos (`toCentOSVault` task).
+
+#### Disable any Desired State Puppet Repo Management first 
+If you are managing the CentOS repos using Puppet, you will want to disable that before running these tasks. You will need to modify that setup after the conversion either way. 
+If this is not disabled prior to running, you may create a much larger issue with trying to apply the wrong repos to your hosts.
+
+
 
 ## PQL Query to identify all `CentOS 8` (excluding CentOSSteam) hosts in your environment
 

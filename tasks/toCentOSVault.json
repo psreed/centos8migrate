@@ -1,0 +1,23 @@
+{
+    "description": "Modify YUM Repos to use CentOS 8 Vault.",
+    "parameters": {
+        "run_yum": {
+            "description": "Run 'yum update -y' after modification.",
+            "type": "Boolean",
+            "default": true
+        },
+        "reboot": {
+            "description": "Reboot at end of task completion.",
+            "type": "Boolean",
+            "default": true
+        }
+    },
+    "implementations": [
+        {
+            "name": "toCentOSVault.sh",
+            "requirements": [
+                "shell"
+            ]
+        }
+    ]
+}
