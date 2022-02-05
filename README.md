@@ -32,6 +32,13 @@ Be more patient.
 
 If you're still not patient enough, login to your target host and watch things with `top`. You should see lots of activity with `yum` and `semodule` processes, but they may pop in and out of the process list regularly. There are a lot of things to update and these things take time. Also, things are dependant on download speed.
 
+#### Make Snapshots if you can!
+
+If you're using this no VM images, make sure to use snapshots before running the migration scripts as this may be an irreversable change.
+And don't forget to remove your snapshots after everything us verified and running well afterward!
+
+
+
 ## PQL Query to identify all `CentOS 8` (excluding `CentOS 8 Stream`) hosts in your environment
 
 ```inventory[certname] { facts.os.name = "CentOS" and facts.os.release.major="8" and facts.os.distro.id!="CentOSStream"}```
@@ -52,12 +59,18 @@ This task will convert CentOS 8 hosts to CentOSSteam, performing a reboot on com
 
 Estimated runtime for this task is ~17mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
+
 ### to_alma_linux
 
 This task will convert CentOS 8 hosts to Alma Linux 8, performing a reboot on completion.
 
+Estimated runtime for this task is ~26mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
+
+
 ### to_rocky
 
 This task will convert CentOS 8 hosts to Rocky Linux 8, performing a reboot on completion.
+
+Estimated runtime for this task is ~26mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
 

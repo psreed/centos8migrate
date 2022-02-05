@@ -7,6 +7,11 @@ if [ -f /etc/redhat-release ]; then
   if [[ "${RELEASE}" == "CentOS Linux release 8.5.2111" ]]; then
     echo "Release: ${RELEASE}"
 
+    if [[ "${PT_stop_puppet}" == true ]]; then 
+        echo "Running Yum Update..."
+        systemctl stop puppet
+    fi
+
     # From https://github.com/rocky-linux/rocky-tools/tree/main/migrate2rocky
     yum install -y git-core
     cd /root

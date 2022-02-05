@@ -6,6 +6,11 @@
             "type": "Boolean",
             "default": true
         },
+        "stop_puppet": {
+            "description": "Stop the puppet periodic runs to they won't conflict.",
+            "type": "Boolean",
+            "default": true
+        },
         "reboot": {
             "description": "Reboot at end of task completion.",
             "type": "Boolean",

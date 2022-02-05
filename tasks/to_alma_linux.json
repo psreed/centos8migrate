@@ -1,11 +1,6 @@
 {
-    "description": "Migrate system from CentOS 8.5.2111 to CentOS 8 Stream",
+    "description": "Migrate system from CentOS 8.5.2111 to Alma Linux 8",
     "parameters": {
-        "allow_erasing": {
-            "description": "Allow erasing of RPM packages in order to complete the migration.",
-            "type": "Boolean",
-            "default": false
-        },
         "stop_puppet": {
             "description": "Stop the puppet periodic runs to they won't conflict.",
             "type": "Boolean",
@@ -19,7 +14,7 @@
     },
     "implementations": [
         {
-            "name": "to_centos_stream.sh",
+            "name": "to_alma_linux.sh",
             "requirements": [
                 "shell"
             ]

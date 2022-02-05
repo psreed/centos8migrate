@@ -13,17 +13,12 @@ if [ -f /etc/redhat-release ]; then
     fi
 
 
-    yum --disablerepo '*' --enablerepo extras swap centos-linux-repos centos-stream-repos -y
-    yum clean all
-    yum makecache
+    cd /root
+    curl -O https://raw.githubusercontent.com/AlmaLinux/almalinux-deploy/master/almalinux-deploy.sh
+    
+    bash almalinux-deploy.sh
 
-    if [[ "${PT_allow_erasing}" == true ]]; then
-      yum distro-sync --allowerasing
-    else
-      yum distro-sync
-    fi
-
-    yum update -y
+    dnf distro-sync -y 
 
     if [[ "${PT_reboot}" == true ]]; then 
       echo "Scheduling system restart in 1 minute..."
