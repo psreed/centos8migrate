@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# Check to make sure we are actually on a CentOS 8.5.2111 host
+# Check to make sure we are actually on a CentOS 8.5.2111  or Stream 8 host
 if [ -f /etc/redhat-release ]; then 
 
   RELEASE=`head -1 /etc/redhat-release`
-  if [[ "${RELEASE}" == "CentOS Linux release 8.5.2111" ]]; then
+  if [[ "${RELEASE}" == "CentOS Linux release 8.5.2111" || "${RELEASE}" == "CentOS Stream release 8" ]]; then
     echo "Release: ${RELEASE}"
 
     if [[ "${PT_stop_puppet}" == true ]]; then 
