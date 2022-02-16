@@ -22,6 +22,10 @@ if [ -f /etc/redhat-release ]; then
       chmod u+x migrate2rocky.sh
       ./migrate2rocky.sh -r
 
+      # Fix cases where distro-sync fails on expired GPG keys and boot loader gets missed
+      dnf distro-sync -y
+      grub2-mkconfig --output=/boot/efi/EFI/rocky/grub.cfg
+
       # Dump the log into standard out
       cat /var/log/migrate2rocky.log
 
