@@ -1,0 +1,6 @@
+name: centos8migrate
+modulepath: ["modules", ".."]
+modules:
+  - puppetlabs/translate
+  - puppetlabs/inifile
+  - puppetlabs/stdlib

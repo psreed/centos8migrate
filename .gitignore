@@ -26,3 +26,5 @@
 .envrc
 /inventory.yaml
 /spec/fixtures/litmus_inventory.yaml
+.rerun.json
+bolt-debug.log
