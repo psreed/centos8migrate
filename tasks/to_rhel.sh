@@ -26,7 +26,7 @@ if [ -f /etc/redhat-release ]; then
 
     yum -y install convert2rhel
 
-    convert2rhel -y --username $PT_rhn_user --password $PT_rhn_pass --pool $PT_rhn_pool_id--debug
+    convert2rhel -y --username $PT_rhn_user --password $PT_rhn_pass --pool $PT_rhn_poolid--debug
 
 
     if [[ "${PT_reboot}" == true ]]; then 

@@ -10,7 +10,7 @@
             "type": "String",
             "sensitive": true
         },
-        "rhn_pool_id": {
+        "rhn_poolid": {
             "description": "RedHat Network Pool ID for Subscription.",
             "type": "String"
         },
