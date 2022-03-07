@@ -12,7 +12,6 @@ if [[ "${RELEASE}" == *"CentOS Linux"* && "${RELEASE}" == *"8"* ]]; then
   echo "Release: ${RELEASE}"
 
   if [[ "${PT_stop_puppet}" == true ]]; then 
-      echo "Running Yum Update..."
       systemctl stop puppet
   fi
 

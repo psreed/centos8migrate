@@ -1,0 +1,32 @@
+{
+    "description": "Convert system from CentOS 8.5.2111 to RedHat 8.",
+    "parameters": {
+        "rhn_user": {
+            "description": "RedHat Network Username for Subscription.",
+            "type": "String"
+        },
+        "rhn_pass": {
+            "description": "RedHat Network Password for Subscription.",
+            "type": "String",
+            "sensitive": true
+        },
+        "stop_puppet": {
+            "description": "Stop the puppet periodic runs to they won't conflict.",
+            "type": "Boolean",
+            "default": true
+        },
+        "reboot": {
+            "description": "Reboot after migration tasks are complete.",
+            "type": "Boolean",
+            "default": true
+        }
+    },
+    "implementations": [
+        {
+            "name": "to_rhel.sh",
+            "requirements": [
+                "shell"
+            ]
+        }
+    ]
+}

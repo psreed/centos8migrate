@@ -8,7 +8,6 @@ if [ -f /etc/redhat-release ]; then
     echo "Release: ${RELEASE}"
 
     if [[ "${PT_stop_puppet}" == true ]]; then 
-        echo "Running Yum Update..."
         systemctl stop puppet
     fi
 
