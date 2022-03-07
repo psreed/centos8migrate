@@ -15,6 +15,8 @@ if [ -f /etc/redhat-release ]; then
 
     # Following RHEL Conversion process as described: 
     # https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/converting_from_an_rpm-based_linux_distribution_to_rhel/index?extIdCarryOver=true&sc_cid=701f2000001OH6fAAG
+
+    # Additional Info: https://access.redhat.com/articles/2360841
     
     curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release https://www.redhat.com/security/data/fd431d51.txt
 
@@ -24,7 +26,7 @@ if [ -f /etc/redhat-release ]; then
 
     yum -y install convert2rhel
 
-    convert2rhel --username $PT_rhn_user --password $PT_rhn_pass
+    convert2rhel -y --username $PT_rhn_user --password $PT_rhn_pass --pool $PT_rhn_pool_id--debug
 
 
     if [[ "${PT_reboot}" == true ]]; then 

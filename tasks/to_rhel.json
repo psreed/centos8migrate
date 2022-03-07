@@ -10,6 +10,10 @@
             "type": "String",
             "sensitive": true
         },
+        "rhn_pool_id": {
+            "description": "RedHat Network Pool ID for Subscription.",
+            "type": "String"
+        },
         "stop_puppet": {
             "description": "Stop the puppet periodic runs to they won't conflict.",
             "type": "Boolean",
