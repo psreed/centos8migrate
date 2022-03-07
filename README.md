@@ -73,4 +73,9 @@ This task will convert CentOS 8 hosts to Rocky Linux 8, performing a reboot on c
 
 Estimated runtime for this task is ~26mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
+### to_rhel
+
+This task will convert CentOS 8 hosts to RedHat Enterprise Linux 8, performing a reboot on completion.
+
+Estimated runtime for this task is ~26mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
