@@ -1,4 +1,4 @@
-# costos8migrate
+# centos8migrate
 
 Puppet Helpers to Migrate from `CentOS 8` to `EuroLinux 8`, `Alma Linux 8`, `Rocky Linux 8` or `CentOS 8 Stream`
 
