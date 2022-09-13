@@ -1,0 +1,23 @@
+{
+    "description": "Migrate system from CentOS 8.5.2111 to EuroLinux 8",
+    "parameters": {
+        "stop_puppet": {
+            "description": "Stop the puppet periodic runs to they won't conflict.",
+            "type": "Boolean",
+            "default": true
+        },
+        "reboot": {
+            "description": "Reboot after migration tasks are complete.",
+            "type": "Boolean",
+            "default": true
+        }
+    },
+    "implementations": [
+        {
+            "name": "to_eurolinux.sh",
+            "requirements": [
+                "shell"
+            ]
+        }
+    ]
+}
