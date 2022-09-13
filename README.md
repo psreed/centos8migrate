@@ -1,6 +1,6 @@
-# costos8migrate
+# centos8migrate
 
-Puppet Helpers to Migrate from `CentOS 8` to `Alma Linux 8`, `Rocky Linux 8` or `CentOS 8 Stream`
+Puppet Helpers to Migrate from `CentOS 8` to `EuroLinux 8`, `Alma Linux 8`, `Rocky Linux 8` or `CentOS 8 Stream`
 
 ## WARNING: Use at your own risk. There is NO Support for this module.
 
@@ -58,6 +58,13 @@ I would recommend starting with this task to make sure your release is as up to 
 This task will convert CentOS 8 hosts to CentOSSteam, performing a reboot on completion.
 
 Estimated runtime for this task is ~17mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
+
+
+### to_eurolinux
+
+This task will convert CentOS 8 hosts to EuroLinux 8, performing a reboot on completion.
+
+Estimated runtime for this task is ~26mins on a 2CPU, 2GB RAM minimal "Server with GUI installation" with access to a 1000MBit/s internet connection.
 
 
 ### to_alma_linux
